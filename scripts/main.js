@@ -210,6 +210,11 @@ const contacts = [
         link: "skype:live:b40de7af6d91ef8b"
     },
     {
+        title: "Linkedin",
+        icon: '<i class="fab fa-linkedin"></i>',
+        link: "https://www.linkedin.com/in/ehab-elbwab-157862369/"
+    },
+    {
         title: "Email",
         icon: '<i class="fas fa-envelope"></i>',
         link: "mailto:ehabelbwab75@gmail.com"
