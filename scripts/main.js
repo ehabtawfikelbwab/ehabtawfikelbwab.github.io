@@ -164,12 +164,11 @@ const projects = [
 const skills = [
     "Unity",
     "C#",
-    "C++",
+    "Git version control",
     "3D Modeling",
     "2D UI/UX Design",
     "VFX Design",
     "SFX Design",
-    "Android, iOS, PC"
 ];
 
 const projectsContainer = document.getElementById("projects-container");
