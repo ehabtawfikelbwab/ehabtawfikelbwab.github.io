@@ -153,7 +153,7 @@ const projects = [
     }
     ,
     {
-        title: "Stack ‘n’ Cross",
+        title: "Stack n' Cross",
         description: "Independent (Sneet Games).",
         img: "pics/StacknCross.jpg",
         link: "https://www.youtube.com/shorts/J8whtDyGG0o",
