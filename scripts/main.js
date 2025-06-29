@@ -151,6 +151,14 @@ const projects = [
         link: "https://drive.google.com/file/d/1HcDBfIkw02NR0w5FufraaMSnKYMngwqk/view",
         year: 2024
     }
+    ,
+    {
+        title: "Stack ‘n’ Cross",
+        description: "Independent (Sneet Games).",
+        img: "pics/StacknCross.jpg",
+        link: "https://www.youtube.com/shorts/J8whtDyGG0o",
+        year: 2025
+    }
 ];
 
 const skills = [
