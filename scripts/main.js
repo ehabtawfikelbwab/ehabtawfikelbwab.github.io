@@ -33,28 +33,28 @@ typeText('about-text', aboutText, 1);
 const projects = [
     {
         title: "Avoid Bomb 3d",
-        description: "Independent (EtE Studio).",
+        description: "(EtE Studio).",
         img: "pics/avoid-bomb.png",
         link: "https://drive.google.com/file/d/1F8xfwdr--N-L3BLoTPMaoXARBzMv7o_8/view",
         year: 2019
     },
     {
         title: "Free Kill",
-        description: "Independent (EtE Studio).",
+        description: "(EtE Studio).",
         img: "pics/free-kill.png",
         link: "https://drive.google.com/file/d/1EDeF7EtFXi8ajr9_ckbjbFjP2_j5asHb/view",
         year: 2019
     },
     {
         title: "Avoid Falling",
-        description: "Independent (EtE Studio).",
+        description: "(EtE Studio).",
         img: "pics/avoid-falling.png",
         link: "https://drive.google.com/file/d/196Gg4s8mef-oykG2MbbAU-_Omv1lB5Ca/view",
         year: 2020
     },
     {
         title: "Bomber Race",
-        description: "Independent (EtE Studio).",
+        description: "(EtE Studio).",
         img: "pics/bomber-race-3d.png",
         link: "https://drive.google.com/file/d/1c-IFZdaWrD4ZA162cWarU22QI1Hyev8O/view",
         year: 2020
@@ -68,28 +68,28 @@ const projects = [
     },
     {
         title: "Flappy Doll 3D",
-        description: "Independent (Sneet Games).",
+        description: "(Sneet Games).",
         img: "pics/flappy-doll-3d.png",
         link: "https://drive.google.com/file/d/1lpE6NzVTIfbK0hDOCAkm2WUBSX-mHmln/view",
         year: 2021
     },
     {
         title: "Builder Jumper 3D",
-        description: "Independent (Sneet Games).",
+        description: "(Sneet Games).",
         img: "pics/builder-jumper-3d.png",
         link: "https://drive.google.com/file/d/1n16GHb2rP5OxGLIDcNrhRuKQizX5Ugsu/view",
         year: 2021
     },
     {
         title: "Painter Hand 3D",
-        description: "Independent (Sneet Games).",
+        description: "(Sneet Games).",
         img: "pics/painter-hand-3d.png",
         link: "https://drive.google.com/file/d/10qDQTSCnSoi9VSDGkaTMmH5zXY4kIKrE/view",
         year: 2021
     },
     {
         title: "Engineer Ball",
-        description: "Independent (Sneet Games).",
+        description: "(Sneet Games).",
         img: "pics/engineer-ball.png",
         link: "https://drive.google.com/file/d/1xRIzch0Ozy3Vt8ZH2ZhtxmpUu2A3r6ec/view",
         year: 2022
@@ -131,14 +131,14 @@ const projects = [
     },
     {
         title: "Kiddog",
-        description: "Independent (Sneet Games).",
+        description: "(Sneet Games).",
         img: "pics/kiddog.png",
         link: "https://drive.google.com/file/d/1341wN6B251A8dseBAzI9xVB-bFdWwQZr/view",
         year: 2024
     },
     {
         title: "Fill lord 3D",
-        description: "Independent (Sneet Games).",
+        description: "(Sneet Games).",
         img: "pics/fill-lord-3d.png",
         link: "https://drive.google.com/file/d/1bIuF8gAxpKo8CCGlSDWzqFymdpRRtJXQ/view",
         year: 2024
@@ -146,7 +146,7 @@ const projects = [
     ,
     {
         title: "Fart Racing",
-        description: "Independent (Sneet Games).",
+        description: "(Sneet Games).",
         img: "pics/fart-racing.png",
         link: "https://drive.google.com/file/d/1HcDBfIkw02NR0w5FufraaMSnKYMngwqk/view",
         year: 2024
@@ -154,7 +154,7 @@ const projects = [
     ,
     {
         title: "Stack n' Cross",
-        description: "Independent (Sneet Games).",
+        description: "(Sneet Games).",
         img: "pics/StacknCross.jpg",
         link: "https://www.youtube.com/shorts/J8whtDyGG0o",
         year: 2025
