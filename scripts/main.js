@@ -148,7 +148,7 @@ const projects = [
         title: "Fart Racing",
         description: "(Sneet Games).",
         img: "pics/fart-racing.png",
-        link: "https://drive.google.com/file/d/1HcDBfIkw02NR0w5FufraaMSnKYMngwqk/view",
+        link: "https://www.youtube.com/shorts/-G4UhzjZFi4",
         year: 2024
     }
     ,
