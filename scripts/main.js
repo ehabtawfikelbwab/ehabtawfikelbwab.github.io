@@ -159,6 +159,14 @@ const projects = [
         link: "https://www.youtube.com/shorts/J8whtDyGG0o",
         year: 2025
     }
+    ,
+    {
+        title: "Rope Guys",
+        description: "(Sneet Games).",
+        img: "pics/rope-guys.png",
+        link: "https://www.youtube.com/shorts/0Xmmlyv7Rx4",
+        year: 2025
+    }
 ];
 
 const skills = [
