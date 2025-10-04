@@ -1,9 +1,9 @@
-const aboutText = "Hi, I'm <strong>Ehab Tawfik</strong>, a Game Developer from <strong>Egypt</strong>.<br>" +
-    "With <strong>4 years of experience</strong> in the gaming industry, I specialize in creating games across multiple platforms including <strong>Android, iOS, and PC</strong>.<br>" +
-    "My journey in game development has equipped me with a diverse skill set, from <strong>Unity development</strong> to <strong>C# and C++ programming</strong>, as well as expertise in <strong>3D Modeling, 2D UI/UX Design, VFX Design, and SFX Design</strong>.<br>" +
-    "I strive to build engaging and interactive games that deliver both visually stunning and technically sound experiences.<br>" +
-    "Whether I'm designing intuitive user interfaces or crafting sounds, I aim to bring creativity and technical expertise to every project I undertake.<br>" +
-    "Fluent in both <strong>Arabic</strong> and <strong>English</strong>, I am always open to collaborating with teams and expanding my skill set to deliver outstanding gaming experiences.<br>";
+const aboutText =
+    "Hi, I'm <strong>Ehab Tawfik</strong>, a Game Developer from <strong>Egypt</strong>.<br>" +
+    "With <strong>4 years of experience</strong> creating games for <strong>Android, iOS, and PC</strong>.<br>" +
+    "My main tools are <strong>Unity</strong> and <strong>C#</strong>, and I also work with <strong>3D Modeling</strong>, <strong>2D UI/UX Design</strong>, <strong>VFX</strong>, and <strong>SFX</strong>.<br>" +
+    "I enjoy making games that are <strong>fun to play</strong>, <strong>look great</strong>, and <strong>run smoothly</strong>.<br>" +
+    "I speak <strong>English</strong> and <strong>Arabic</strong>, and I’m always open to <strong>teamwork</strong> and <strong>learning new things</strong> to make better games.<br>";
 
 // Function to type the text with HTML tags correctly handled
 const typeText = (elementId, text, delay) => {
