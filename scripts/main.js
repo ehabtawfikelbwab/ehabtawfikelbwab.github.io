@@ -167,6 +167,14 @@ const projects = [
         link: "https://www.youtube.com/shorts/0Xmmlyv7Rx4",
         year: 2025
     }
+    ,
+    {
+        title: "Epic Shot",
+        description: "(Sneet Games).",
+        img: "pics/epic-shot.jpg",
+        link: "https://youtube.com/shorts/pz6va-K80Ys",
+        year: 2025
+    }
 ];
 
 const skills = [
