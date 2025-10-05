@@ -172,7 +172,7 @@ const projects = [
         title: "Epic Shot",
         description: "(Sneet Games).",
         img: "pics/epic-shot.jpg",
-        link: "https://youtube.com/shorts/pz6va-K80Ys",
+        link: "https://youtube.com/shorts/LXi4Oa-0Sbs",
         year: 2025
     }
 ];
