@@ -235,7 +235,7 @@ const contacts = [
     {
         title: "Linkedin",
         icon: '<i class="fab fa-linkedin"></i>',
-        link: "https://www.linkedin.com/in/ehab-elbwab-157862369/"
+        link: "https://www.linkedin.com/in/ehab-tawfik-elbwab-157862369/"
     },
     {
         title: "Email",
