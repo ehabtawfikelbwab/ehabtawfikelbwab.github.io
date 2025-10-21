@@ -230,7 +230,7 @@ const contacts = [
     {
         title: "Skype",
         icon: '<i class="fab fa-skype"></i>',
-        link: "skype:live:b40de7af6d91ef8b"
+        link: "skype:live:.cid.2520f4c8c75d6d6d"
     },
     {
         title: "Linkedin",
