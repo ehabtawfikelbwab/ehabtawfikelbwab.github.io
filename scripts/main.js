@@ -178,11 +178,14 @@ const projects = [
 ];
 
 const skills = [
-    "Unity",
-    "C#",
-    "Git version control",
+    "Unity Engine",
+    "C# / OPP",
+    "Clean Code",
+    "Game physics",
+    "Version control (Git)",
+    "Cross-platform development (iOS, Android and PC)",
     "3D Modeling",
-    "2D UI/UX Design",
+    "2D Design",
     "VFX Design",
     "SFX Design",
 ];
