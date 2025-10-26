@@ -1,7 +1,7 @@
 const aboutText =
     "Hi, I'm <strong>Ehab Tawfik</strong>, a Game Developer from <strong>Egypt</strong>.<br>" +
     "With <strong>4 years of experience</strong> creating games for <strong>Android, iOS, and PC</strong>.<br>" +
-    "My main tools are <strong>Unity</strong> and <strong>C#</strong>, and I also work with <strong>3D Modeling</strong>, <strong>2D UI/UX Design</strong>, <strong>VFX</strong>, and <strong>SFX</strong>.<br>" +
+    "My main tools are <strong>Unity</strong> and <strong>C#</strong>, and I also work with <strong>3D Modeling</strong>, <strong>2D Design</strong>, <strong>VFX</strong>, and <strong>SFX</strong>.<br>" +
     "I enjoy making games that are <strong>fun to play</strong>, <strong>look great</strong>, and <strong>run smoothly</strong>.<br>" +
     "I speak <strong>English</strong> and <strong>Arabic</strong>, and I’m always open to <strong>teamwork</strong> and <strong>learning new things</strong> to make better games.<br>";
 
