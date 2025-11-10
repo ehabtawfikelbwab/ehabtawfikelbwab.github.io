@@ -175,6 +175,14 @@ const projects = [
         link: "https://youtube.com/shorts/LXi4Oa-0Sbs",
         year: 2025
     }
+    ,
+    {
+        title: "Safe Passage",
+        description: "(Sneet Games).",
+        img: "pics/safe-passage.jpg",
+        link: "https://youtube.com/shorts/PROINvTcce4",
+        year: 2025
+    }
 ];
 
 const skills = [
