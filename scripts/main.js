@@ -180,7 +180,7 @@ const projects = [
         title: "Safe Passage",
         description: "(Sneet Games).",
         img: "pics/safe-passage.jpg",
-        link: "https://youtube.com/shorts/PROINvTcce4",
+        link: "https://youtube.com/shorts/pXUzLhjOSYA",
         year: 2025
     }
 ];
