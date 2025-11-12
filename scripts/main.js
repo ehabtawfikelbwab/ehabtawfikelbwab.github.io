@@ -188,14 +188,13 @@ const projects = [
 const skills = [
     "Unity Engine",
     "C# / OPP",
-    "Clean Code",
+    "Clean Code / Debugging",
+    "Game Analytics & SDK Integration",
     "Game physics",
     "Version control (Git)",
     "Cross-platform development (iOS, Android and PC)",
     "3D Modeling",
     "2D Design",
-    "VFX Design",
-    "SFX Design",
 ];
 
 const projectsContainer = document.getElementById("projects-container");
