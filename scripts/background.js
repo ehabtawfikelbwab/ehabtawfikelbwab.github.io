@@ -4,65 +4,101 @@ const ctx = canvas.getContext("2d");
 let w = canvas.width = window.innerWidth;
 let h = canvas.height = window.innerHeight;
 
-window.addEventListener('resize', () => {
-    w = canvas.width = window.innerWidth;
-    h = canvas.height = window.innerHeight;
+window.addEventListener("resize", () => {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
 });
 
-const particles = [];
-const numParticles = 80;
+const mouse = { x: w / 2, y: h / 2 };
+window.addEventListener("mousemove", e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+});
 
-// create particles
-for (let i = 0; i < numParticles; i++) {
-    particles.push({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        size: Math.random() * 2 + 1,
-        speedX: (Math.random() - 0.5) * 0.5,
-        speedY: (Math.random() - 0.5) * 0.5
-    });
+const stars = [];
+const fallingStars = [];
+const STAR_COUNT = 150;
+
+for (let i = 0; i < STAR_COUNT; i++) {
+  stars.push({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    z: Math.random() * 1 + 0.2,
+    vx: (Math.random() - 0.5) * 0.08,
+    vy: (Math.random() - 0.5) * 0.08
+  });
 }
 
+/* 🔥 FIXED: spawn anywhere on TOP edge */
+function spawnFallingStar() {
+  fallingStars.push({
+    x: Math.random() * w,                 // RANDOM across top
+    y: -80,                               // off-screen top
+    vx: -(Math.random() * 0.6 + 0.6),     // move LEFT
+    vy: Math.random() * 0.8 + 0.8,        // move DOWN
+    size: Math.random() * 2 + 2.5,
+    trail: []
+  });
+}
+
+setInterval(spawnFallingStar, 1600);
+
 function animate() {
-    ctx.clearRect(0, 0, w, h);
+  ctx.clearRect(0, 0, w, h);
 
-    // draw lines between nearby particles
-    for (let i = 0; i < particles.length; i++) {
-        const p1 = particles[i];
-        ctx.fillStyle = "#0ff";
-        ctx.globalAlpha = 0.7;
-        ctx.beginPath();
-        ctx.arc(p1.x, p1.y, p1.size, 0, Math.PI * 2);
-        ctx.fill();
+  // stars
+  for (const s of stars) {
+    const px = (mouse.x - w / 2) * 0.001 * s.z;
+    const py = (mouse.y - h / 2) * 0.001 * s.z;
 
-        for (let j = i + 1; j < particles.length; j++) {
-            const p2 = particles[j];
-            const dx = p1.x - p2.x;
-            const dy = p1.y - p2.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 120) {
-                ctx.strokeStyle = `rgba(0, 255, 255, ${1 - dist / 120})`;
-                ctx.lineWidth = 0.5;
-                ctx.beginPath();
-                ctx.moveTo(p1.x, p1.y);
-                ctx.lineTo(p2.x, p2.y);
-                ctx.stroke();
-            }
-        }
+    s.x += s.vx + px;
+    s.y += s.vy + py;
+
+    if (s.x < 0) s.x = w;
+    if (s.x > w) s.x = 0;
+    if (s.y < 0) s.y = h;
+    if (s.y > h) s.y = 0;
+
+    ctx.globalAlpha = 0.9;
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(s.x, s.y, 1.5, 1.5);
+  }
+
+  // meteors
+  for (let i = fallingStars.length - 1; i >= 0; i--) {
+    const f = fallingStars[i];
+
+    f.trail.push({ x: f.x, y: f.y });
+    if (f.trail.length > 70) f.trail.shift();
+
+    f.x += f.vx;
+    f.y += f.vy;
+
+    for (let t = 0; t < f.trail.length; t++) {
+      const p = f.trail[t];
+      ctx.globalAlpha = (t / f.trail.length) * 0.5;
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(p.x, p.y, 1.6, 1.6);
     }
 
-    // move particles
-    particles.forEach(p => {
-        p.x += p.speedX;
-        p.y += p.speedY;
+    ctx.globalAlpha = 1;
+    ctx.shadowBlur = 18;
+    ctx.shadowColor = "#ffffff";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(f.x, f.y, f.size, f.size);
+    ctx.shadowBlur = 0;
 
-        if (p.x < 0) p.x = w;
-        if (p.x > w) p.x = 0;
-        if (p.y < 0) p.y = h;
-        if (p.y > h) p.y = 0;
-    });
+    const tail = f.trail[0];
+    if (
+      f.x < -150 ||
+      f.y > h + 150 ||
+      (tail && (tail.x < -150 || tail.y > h + 150))
+    ) {
+      fallingStars.splice(i, 1);
+    }
+  }
 
-    requestAnimationFrame(animate);
+  requestAnimationFrame(animate);
 }
 
 animate();

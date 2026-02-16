@@ -45,7 +45,7 @@ function renderProjects() {
         <h3>${proj.name}</h3>
         <p>${proj.description}</p>
       ${linkClose}
-${proj.video ? `<button class="play-btn"><span class="play-icon">▶</span> Video</button>` : ""}
+${proj.video ? `<button class="play-btn"><span class="play-icon">▶</span> Watch now</button>` : ""}
     `;
 
     const banner = document.createElement("div");
