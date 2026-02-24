@@ -106,11 +106,11 @@ document.getElementById("projects").appendChild(loadMoreBtn);
 renderProjects();
 
 const aboutText =
-  "Hi, I'm <strong>Ehab Tawfik</strong>, a Game Developer from <strong>Egypt</strong>.<br>" +
-  "With <strong>5 years of experience</strong> creating games for <strong>Android, iOS, and PC</strong>.<br>" +
+  "Hi, I'm <strong>Ehab Tawfik</strong>, a Game Developer.<br>" +
+  "With <strong>5 years of experience</strong> creating games for <strong>Android, iOS, WebGL, and PC</strong>.<br>" +
   "My main tools are <strong>Unity</strong> and <strong>C#</strong>, and I also work with <strong>3D Modeling</strong>, <strong>2D Design</strong>, <strong>VFX</strong>, and <strong>SFX</strong>.<br>" +
   "I enjoy making games that are <strong>fun to play</strong>, <strong>look great</strong>, and <strong>run smoothly</strong>.<br>" +
-  "I speak <strong>English</strong> and <strong>Arabic</strong>, and I’m always open to <strong>teamwork</strong> and <strong>learning new things</strong> to make better games.<br>";
+  "Fluent in <strong>English</strong>, I’m always open to <strong>teamwork</strong> and <strong>learning new things</strong> to make better games.<br>";
 
 function typeTextHTML(elementId, htmlText, delay = 20) {
   const element = document.getElementById(elementId);

@@ -17,7 +17,7 @@ window.addEventListener("mousemove", e => {
 
 const stars = [];
 const fallingStars = [];
-const STAR_COUNT = 150;
+const STAR_COUNT = 100;
 
 for (let i = 0; i < STAR_COUNT; i++) {
   stars.push({
