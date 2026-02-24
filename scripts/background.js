@@ -29,21 +29,23 @@ for (let i = 0; i < STAR_COUNT; i++) {
   });
 }
 
-/* 🔥 FIXED: spawn anywhere on TOP edge */
+/* Spawn falling star off top edge */
 function spawnFallingStar() {
   fallingStars.push({
-    x: Math.random() * w,                 // RANDOM across top
-    y: -80,                               // off-screen top
-    vx: -(Math.random() * 0.6 + 0.6),     // move LEFT
-    vy: Math.random() * 0.8 + 0.8,        // move DOWN
+    x: Math.random() * w,
+    y: -80,
+    vx: -(Math.random() * 0.6 + 0.6), // move left
+    vy: Math.random() * 0.8 + 0.8,    // move down
     size: Math.random() * 2 + 2.5,
     trail: []
   });
 }
 
-setInterval(spawnFallingStar, 1600);
+// Time-based spawn
+let lastSpawn = 0;
+const spawnInterval = 1600; // ms
 
-function animate() {
+function animate(timestamp) {
   ctx.clearRect(0, 0, w, h);
 
   // stars
@@ -64,7 +66,13 @@ function animate() {
     ctx.fillRect(s.x, s.y, 1.5, 1.5);
   }
 
-  // meteors
+  // spawn falling star if interval passed
+  if (!lastSpawn || timestamp - lastSpawn > spawnInterval) {
+    spawnFallingStar();
+    lastSpawn = timestamp;
+  }
+
+  // falling stars
   for (let i = fallingStars.length - 1; i >= 0; i--) {
     const f = fallingStars[i];
 
@@ -101,4 +109,4 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-animate();
+requestAnimationFrame(animate);
