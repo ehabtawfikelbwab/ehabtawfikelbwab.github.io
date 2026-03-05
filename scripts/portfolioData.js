@@ -128,7 +128,7 @@ const PortfolioData = {
         description: "Race against opponents and use food-powered farts to blast shortcuts to victory!",
         img: "pics/fart-racing.png",
         video: { url: "videos/fart_racing_video.mp4" },
-        link: "https://www.youtube.com/shorts/-G4UhzjZFi4",
+        // link: "https://www.youtube.com/shorts/-G4UhzjZFi4",
         year: 2024
       },
       {
@@ -136,7 +136,7 @@ const PortfolioData = {
         description: "Collect blocks to climb higher, dodge deadly obstacles, and reach the slide to advance!",
         img: "pics/StacknCross.jpg",
         video: { url: "videos/stack_n_cross_video.mp4" },
-        link: "https://www.youtube.com/shorts/J8whtDyGG0o",
+        // link: "https://www.youtube.com/shorts/J8whtDyGG0o",
         year: 2025
       },
       {
@@ -144,7 +144,7 @@ const PortfolioData = {
         description: "Hold the rope, trip crowds, and run—timing is everything in this chaotic chase!",
         img: "pics/rope-guys.png",
         video: { url: "videos/rope_guys_video.mp4" },
-        link: "https://www.youtube.com/shorts/0Xmmlyv7Rx4",
+        // link: "https://www.youtube.com/shorts/0Xmmlyv7Rx4",
         year: 2025
       },
       {
@@ -152,7 +152,7 @@ const PortfolioData = {
         description: "Control a precision bullet, ricochet through arenas, and take out enemies with perfect shots!",
         img: "pics/epic-shot.jpg",
         video: { url: "videos/epic_shot_video.mp4" },
-        link: "https://youtube.com/shorts/LXi4Oa-0Sbs",
+        // link: "https://youtube.com/shorts/LXi4Oa-0Sbs",
         year: 2025
       },
       {
@@ -160,7 +160,7 @@ const PortfolioData = {
         description: "Navigate shared roads and intersections, timing every move perfectly to avoid collisions!",
         img: "pics/safe-passage.jpg",
         video: { url: "videos/safe_passage_video.mp4" },
-        link: "https://youtube.com/shorts/pXUzLhjOSYA",
+        // link: "https://youtube.com/shorts/pXUzLhjOSYA",
         year: 2025
       },
       {
@@ -168,7 +168,15 @@ const PortfolioData = {
         description: "Leap across rooftops, battle enemies, and complete missions with speed, precision, and strategy!",
         img: "pics/samurai-z.jpg",
         video: { url: "videos/samurai_z_video.mp4" },
-        link: "https://youtube.com/shorts/pXUzLhjOSYA",
+        // link: "https://youtube.com/shorts/pXUzLhjOSYA",
+        year: 2026
+      },
+      {
+        name: "Lead the Way",
+        description: "Rotate tiles to build roads and guide groups to their goals!",
+        img: "pics/lead-the-way.png",
+        video: { url: "videos/LTW_video.mp4" },
+        // link: "https://youtube.com/shorts/pXUzLhjOSYA",
         year: 2026
       }
     ]

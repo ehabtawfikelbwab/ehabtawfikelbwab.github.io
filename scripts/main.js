@@ -24,18 +24,22 @@ PortfolioData.contacts.forEach(contact => {
 function renderProjects() {
   const { list, pageSize } = PortfolioData.projects;
 
-  const sortedList = [...list].reverse();
-  const minYear = Math.min(...sortedList.map(p => p.year));
-  const maxYear = Math.max(...sortedList.map(p => p.year));
+  // Keep original order
+  const sortedList = [...list].reverse(); // latest first visually
+  const latestProject = sortedList[0]; // treat first as latest
 
   const slice = sortedList.slice(visibleProjects, visibleProjects + pageSize);
   visibleProjects += slice.length;
+
+  // Determine min and max years for color lerp
+  const years = sortedList.map(p => p.year);
+  const minYear = Math.min(...years);
+  const maxYear = Math.max(...years);
 
   slice.forEach(proj => {
     const card = document.createElement("div");
     card.className = "project-card";
 
-    // Wrap content in a link if a project link exists
     const linkOpen = '';
     const linkClose = '';
 
@@ -45,7 +49,7 @@ function renderProjects() {
         <h3>${proj.name}</h3>
         <p>${proj.description}</p>
       ${linkClose}
-${proj.video ? `<button class="play-btn"><span class="play-icon">▶</span> Watch now</button>` : ""}
+      ${proj.video ? `<button class="play-btn"><span class="play-icon">▶</span> Watch now</button>` : ""}
     `;
 
     const banner = document.createElement("div");
@@ -54,7 +58,7 @@ ${proj.video ? `<button class="play-btn"><span class="play-icon">▶</span> Watc
     const bannerText = document.createElement("span");
 
     // Latest project → red + fire
-    if (proj.year === maxYear) {
+    if (proj === latestProject) {
       bannerText.textContent = "Latest";
       card.classList.add("latest-project");
       banner.style.backgroundColor = "#e53935";
@@ -80,7 +84,6 @@ ${proj.video ? `<button class="play-btn"><span class="play-icon">▶</span> Watc
     loadMoreBtn.style.display = "none";
   }
 }
-
 
 // Lerp function
 function lerpColor(a, b, t) {
