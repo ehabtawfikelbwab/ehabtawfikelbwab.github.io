@@ -178,6 +178,14 @@ const PortfolioData = {
         video: { url: "videos/LTW_video.mp4" },
         // link: "https://youtube.com/shorts/pXUzLhjOSYA",
         year: 2026
+      },
+      {
+        name: "Turbo Up: Car & Plane",
+        description: "Drive, collect wings, and transform into a plane to fly and win races against opponents.",
+        img: "pics/turbo-up.jpg",
+        video: { url: "videos/turbo_up.mp4" },
+        // link: "https://youtube.com/shorts/pXUzLhjOSYA",
+        year: 2026
       }
     ]
   },
