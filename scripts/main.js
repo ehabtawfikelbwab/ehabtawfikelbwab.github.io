@@ -21,6 +21,19 @@ PortfolioData.contacts.forEach(contact => {
   contactsList.appendChild(a);
 });
 
+
+function isPlayStoreLink(url) {
+  if (!url) return false;
+
+  try {
+    const parsedUrl = new URL(url, window.location.href);
+    return parsedUrl.hostname === "play.google.com" ||
+      parsedUrl.hostname.endsWith(".play.google.com");
+  } catch {
+    return url.toLowerCase().includes("play.google.com");
+  }
+}
+
 function renderProjects() {
   const { list, pageSize } = PortfolioData.projects;
 
@@ -49,7 +62,27 @@ function renderProjects() {
         <h3>${proj.name}</h3>
         <p>${proj.description}</p>
       ${linkClose}
-      ${proj.video ? `<button class="play-btn"><span class="play-icon">▶</span> Watch now</button>` : ""}
+
+      ${(proj.video || proj.link) ? `
+        <div class="project-actions">
+          ${proj.video ? `
+            <button class="play-btn" type="button" aria-label="Watch video" title="Watch video">
+              <img src="pics/video-icon.png" class="video-icon" alt="" aria-hidden="true">
+            </button>
+          ` : ""}
+
+          ${proj.link ? `
+            <a class="store-btn" href="${proj.link}" target="_blank" rel="noopener noreferrer"
+               aria-label="${isPlayStoreLink(proj.link) ? 'Open on Play Store' : 'Open project link'}"
+               title="${isPlayStoreLink(proj.link) ? 'Open on Play Store' : 'Open project link'}">
+              <img
+                src="${isPlayStoreLink(proj.link) ? 'pics/play-store-icon.png' : 'pics/url-icon.png'}"
+                alt=""
+                aria-hidden="true">
+            </a>
+          ` : ""}
+        </div>
+      ` : ""}
     `;
 
     const banner = document.createElement("div");
@@ -109,11 +142,10 @@ document.getElementById("projects").appendChild(loadMoreBtn);
 renderProjects();
 
 const aboutText =
-  "Hi, I'm <strong>Ehab Tawfik</strong>, a Game Developer.<br>" +
-  "With <strong>5 years of experience</strong> creating games for <strong>Android, iOS, WebGL, and PC</strong>.<br>" +
-  "My main tools are <strong>Unity</strong> and <strong>C#</strong>, and I also work with <strong>3D Modeling</strong>, <strong>2D Design</strong>, <strong>VFX</strong>, and <strong>SFX</strong>.<br>" +
-  "I enjoy making games that are <strong>fun to play</strong>, <strong>look great</strong>, and <strong>run smoothly</strong>.<br>" +
-  "Fluent in <strong>English</strong>, I’m always open to <strong>teamwork</strong> and <strong>learning new things</strong> to make better games.<br>";
+  "Hello, My name is <strong>Ehab Tawfik</strong>, a Game Developer " +
+  "with <strong>5 years of experience</strong> creating games for <strong>Android, iOS, WebGL, and PC</strong>.<br>" +
+  "My main tools are <strong>Unity</strong> and <strong>C#</strong>, Also I have experience with <strong>3D Modeling</strong>, <strong>2D Design</strong>, <strong>VFX</strong>, and <strong>SFX</strong>.<br>" +
+  "I enjoy making games that are <strong>fun to play</strong>, <strong>look great</strong>, and <strong>run smoothly on devices</strong>.<br>";
 
 function typeTextHTML(elementId, htmlText, delay = 20) {
   const element = document.getElementById(elementId);

@@ -22,105 +22,120 @@ const PortfolioData = {
         name: "Avoid Bomb 3d",
         description: "Run, avoid enemies, and don’t let them pass you the bomb.",
         img: "pics/avoid-bomb.png",
-        link: "https://drive.google.com/file/d/1F8xfwdr--N-L3BLoTPMaoXARBzMv7o_8/view",
+        video: { url: "videos/Avoid_Bomb.mp4" },
+        link: "https://avoid-boom.ar.aptoide.com/app",
         year: 2020
       },
       {
         name: "Avoid Falling",
         description: "Land on the correct platforms to stay safe and avoid falling.",
         img: "pics/avoid-falling.png",
-        link: "https://drive.google.com/file/d/196Gg4s8mef-oykG2MbbAU-_Omv1lB5Ca/view",
+        video: { url: "videos/Avoid_Falling.mp4" },
+        link: "https://apkpure.com/avoid-falling/com.etestudio.avoidfalling",
         year: 2021
       },
       {
         name: "Bomber Race",
         description: "Race against opponents, dodge obstacles, and reach the finish line first.",
         img: "pics/bomber-race-3d.png",
-        link: "https://drive.google.com/file/d/1c-IFZdaWrD4ZA162cWarU22QI1Hyev8O/view",
+        video: { url: "videos/Bomber_Race.mp4" },
+        link: "https://apkpure.com/bomber-race-3d/com.EtEStudio.BomberRace",
         year: 2021
       },
       {
         name: "Champions of Dimensions",
         description: "Control 4 champions across 4 dimensions, defeat enemies, and protect each realm.",
         img: "pics/champions-of-dimensions.png",
-        link: "https://drive.google.com/file/d/1bsEpX6kJt6wqvS6Av-5T6RqDZwv54PZT/view",
+        video: { url: "videos/Champions_of_Dimensions.mp4" },
+        link: "https://apkpure.com/ar/champions-of-dimensions-hero/com.etestudio.CHOD",
         year: 2021
       },
       {
         name: "Flappy Doll 3D",
         description: "Guide your ragdoll through spinning blades—time it right to survive and win!",
         img: "pics/flappy-doll-3d.png",
-        link: "https://drive.google.com/file/d/1lpE6NzVTIfbK0hDOCAkm2WUBSX-mHmln/view",
+        // video: { url: "videos/Fill_lord_3D.mp4" },
+        // link: "https://apkpure.com/fill-lord-3d/com.EtEStudio.FillLord",
         year: 2021
       },
       {
         name: "Builder Jumper 3D",
         description: "Jump on stones, break them quickly, and build your tower before your opponent does!",
         img: "pics/builder-jumper-3d.png",
-        link: "https://drive.google.com/file/d/1n16GHb2rP5OxGLIDcNrhRuKQizX5Ugsu/view",
+        video: { url: "videos/Builder_Jumper_3D.mp4" },
+        link: "https://apkpure.com/builder-jumper-3d/com.SneetGames.BuilderJumper",
         year: 2022
       },
       {
         name: "Painter Hand 3D",
         description: "Catch painting cubes and create your masterpiece!",
         img: "pics/painter-hand-3d.png",
-        link: "https://drive.google.com/file/d/10qDQTSCnSoi9VSDGkaTMmH5zXY4kIKrE/view",
+        // video: { url: "videos/Fill_lord_3D.mp4" },
+        link: "https://apkpure.com/painter-hand-3d/com.SneetGames.painterhand",
         year: 2022
       },
       {
         name: "Engineer Ball",
         description: "Smash, sell, and build—keep the loop going to dominate!",
         img: "pics/engineer-ball.png",
-        link: "https://drive.google.com/file/d/1xRIzch0Ozy3Vt8ZH2ZhtxmpUu2A3r6ec/view",
+        video: { url: "videos/Engineer_Ball.mp4" },
+        link: "https://apkpure.com/engineer-ball/com.SneetGames.EngineerBall",
         year: 2022
       },
       {
         name: "Rolling Color 3d",
         description: "Collect color from your tank and roll around to paint everything in sight!",
         img: "pics/rolling-color-3d.png",
-        link: "https://drive.google.com/drive/folders/1lgWWDbGhHvLEp2XLEFztd5E33r9bVWLI",
+        // video: { url: "videos/Fill_lord_3D.mp4" },
+        link: "https://apkpure.com/rolling-color-3d/com.squidgun.rollingcolor3d",
         year: 2022
       },
       {
         name: "Move N Collect",
         description: "Start with one character, use your rope to collect more, and grow your chain as you move!",
         img: "pics/move-n-collect.png",
-        link: "https://drive.google.com/drive/folders/1BLGSmJMHhH9GgojbZFunwXpl5uNFwjTG",
+        // video: { url: "videos/Fill_lord_3D.mp4" },
+        link: "https://apkpure.com/move-n-collect/com.squidgun.movencollect",
         year: 2023
       },
       {
         name: "Paper Boy 3D",
         description: "Deliver papers to every home while avoiding obstacles and staying on route!",
         img: "pics/paper-boy-3d.jpg",
-        link: "https://drive.google.com/file/d/122IrPn6eqH_hfPiuumQ65UMAyv8I6coC/view",
+        video: { url: "videos/paper_boy.mp4" },
+        link: "https://apkpure.com/paper-boy-3d/com.squidgun.paperboy3d",
         year: 2023
       },
       {
         name: "Luggage Packing 3D",
         description: "Fit all the items perfectly into the luggage and win!",
         img: "pics/luggage-packing-3d.png",
-        link: "https://drive.google.com/file/d/1ZzFRFDIx1n1Hl2uJPhR0UuiCteT72k4Q/view",
+        video: { url: "videos/Luggage_Packing.mp4" },
+        link: "https://apkpure.com/luggage-packing-3d/com.squidgun.luggagepacking3d",
         year: 2023
       },
       {
         name: "Makeup Decor 3D",
         description: "Arrange makeup items perfectly into boxes and shelves!",
         img: "pics/makeup-recognize.png",
-        link: "https://drive.google.com/file/d/1DLrNMyLOIKoBbtPLP_levjVxzokTI4qD/view",
+        video: { url: "videos/Makeup_Decor.mp4" },
+        link: "https://apkpure.com/makeup-decor-3d/com.squidgun.makeupdecor3d",
         year: 2023
       },
       {
         name: "Kiddog",
         description: "Switch between kid and dog, find keys, and rescue the hostages!",
         img: "pics/kiddog.png",
-        link: "https://drive.google.com/file/d/1341wN6B251A8dseBAzI9xVB-bFdWwQZr/view",
+        video: { url: "videos/Kiddog.mp4" },
+        link: "https://apkpure.com/kiddog/com.EtEStudio.Kiddog",
         year: 2024
       },
       {
         name: "Fill lord 3D",
         description: "Grab water from your side and navigate dangerous paths to fill the other side!",
         img: "pics/fill-lord-3d.png",
-        link: "https://drive.google.com/file/d/1bIuF8gAxpKo8CCGlSDWzqFymdpRRtJXQ/view",
+        video: { url: "videos/Fill_lord_3D.mp4" },
+        link: "https://apkpure.com/fill-lord-3d/com.EtEStudio.FillLord",
         year: 2024
       },
       {
@@ -128,7 +143,7 @@ const PortfolioData = {
         description: "Race against opponents and use food-powered farts to blast shortcuts to victory!",
         img: "pics/fart-racing.png",
         video: { url: "videos/fart_racing_video.mp4" },
-        // link: "https://www.youtube.com/shorts/-G4UhzjZFi4",
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.JustFart",
         year: 2024
       },
       {
@@ -136,7 +151,7 @@ const PortfolioData = {
         description: "Collect blocks to climb higher, dodge deadly obstacles, and reach the slide to advance!",
         img: "pics/StacknCross.jpg",
         video: { url: "videos/stack_n_cross_video.mp4" },
-        // link: "https://www.youtube.com/shorts/J8whtDyGG0o",
+        link: "https://apkpure.com/stack-%E2%80%98n%E2%80%99-cross/com.SneetGames.StacknCross/download/0.7",
         year: 2025
       },
       {
@@ -144,7 +159,7 @@ const PortfolioData = {
         description: "Hold the rope, trip crowds, and run—timing is everything in this chaotic chase!",
         img: "pics/rope-guys.png",
         video: { url: "videos/rope_guys_video.mp4" },
-        // link: "https://www.youtube.com/shorts/0Xmmlyv7Rx4",
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.RopeGuys",
         year: 2025
       },
       {
@@ -152,7 +167,7 @@ const PortfolioData = {
         description: "Control a precision bullet, ricochet through arenas, and take out enemies with perfect shots!",
         img: "pics/epic-shot.jpg",
         video: { url: "videos/epic_shot_video.mp4" },
-        // link: "https://youtube.com/shorts/LXi4Oa-0Sbs",
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.epicshot",
         year: 2025
       },
       {
@@ -160,7 +175,7 @@ const PortfolioData = {
         description: "Navigate shared roads and intersections, timing every move perfectly to avoid collisions!",
         img: "pics/safe-passage.jpg",
         video: { url: "videos/safe_passage_video.mp4" },
-        // link: "https://youtube.com/shorts/pXUzLhjOSYA",
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.SafePassage",
         year: 2025
       },
       {
@@ -168,15 +183,15 @@ const PortfolioData = {
         description: "Leap across rooftops, battle enemies, and complete missions with speed, precision, and strategy!",
         img: "pics/samurai-z.jpg",
         video: { url: "videos/samurai_z_video.mp4" },
-        // link: "https://youtube.com/shorts/pXUzLhjOSYA",
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.SamuraiZ",
         year: 2026
       },
       {
         name: "Lead the Way",
         description: "Rotate tiles to build roads and guide groups to their goals!",
-        img: "pics/lead-the-way.png",
+        img: "pics/lead-the-way.jpg",
         video: { url: "videos/LTW_video.mp4" },
-        // link: "https://youtube.com/shorts/pXUzLhjOSYA",
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.LeadtheWay",
         year: 2026
       },
       {
@@ -184,7 +199,15 @@ const PortfolioData = {
         description: "Drive, collect wings, and transform into a plane to fly and win races against opponents.",
         img: "pics/turbo-up.jpg",
         video: { url: "videos/turbo_up.mp4" },
-        // link: "https://youtube.com/shorts/pXUzLhjOSYA",
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.TurboUpCarPlaneRacing",
+        year: 2026
+      },
+      {
+        name: "Slide to Rise!",
+        description: "Slide, smash enemies, stack higher, and clear every stage!",
+        img: "pics/slide-to-rise.jpg",
+        video: { url: "videos/Slide_To_Rise.mp4" },
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.SlidetoRise",
         year: 2026
       }
     ]
