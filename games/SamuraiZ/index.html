@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samurai Z — Sneet Games</title>
+  <meta name="description" content="Play Samurai Z, an action game by Sneet Games. Built with Unity WebGL.">
+  <link rel="shortcut icon" href="Build/Samurai Z.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #08080a;
+      --bg-surface: #111115;
+      --crimson: #c41e3a;
+      --crimson-glow: #e63950;
+      --gold: #c9a84c;
+      --gold-dim: #8a7235;
+      --text-primary: #f0ece4;
+      --text-secondary: #8a8690;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg-primary);
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text-primary);
+    }
+
+    /* ── Loading Screen ─────────────────────────────── */
+    #loading-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-primary);
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+
+    #loading-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Subtle radial accent behind the title */
+    #loading-overlay::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196, 30, 58, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50%      { transform: scale(1.15); opacity: 1; }
+    }
+
+    .loading-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    /* Decorative kanji-style slash */
+    .slash-decoration {
+      width: 2px;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--crimson), transparent);
+      transform: rotate(15deg);
+      animation: slash-fade 2s ease-in-out infinite;
+    }
+
+    @keyframes slash-fade {
+      0%, 100% { opacity: 0.4; }
+      50%      { opacity: 1; }
+    }
+
+    .game-title {
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 7vw, 4rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      text-shadow: 0 0 40px rgba(196, 30, 58, 0.3);
+      user-select: none;
+    }
+
+    .game-title span {
+      color: var(--crimson);
+    }
+
+    .studio-name {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    /* Progress bar */
+    .progress-container {
+      width: clamp(200px, 50vw, 320px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--crimson), var(--crimson-glow));
+      border-radius: 2px;
+      transition: width 0.3s ease-out;
+      box-shadow: 0 0 12px rgba(196, 30, 58, 0.5);
+    }
+
+    .progress-text {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Unity Container ────────────────────────────── */
+    #unity-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-primary);
+      position: relative;
+    }
+
+    #unity-canvas {
+      background: var(--bg-surface);
+      border-radius: 4px;
+    }
+
+    #unity-canvas.unity-mobile {
+      width: 100% !important;
+      height: 100% !important;
+      border-radius: 0;
+    }
+
+    /* Warning banner */
+    #unity-warning {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 200;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    #unity-warning div {
+      padding: 12px 20px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      backdrop-filter: blur(12px);
+      animation: slide-in 0.3s ease-out;
+    }
+
+    @keyframes slide-in {
+      from { transform: translateY(-12px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Footer toolbar */
+    #unity-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: rgba(8, 8, 10, 0.85);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0 20px;
+      z-index: 50;
+    }
+
+    #unity-build-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      letter-spacing: 0.05em;
+    }
+
+    #unity-fullscreen-button {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity 0.2s ease;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23f0ece4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>') center/contain no-repeat;
+    }
+
+    #unity-fullscreen-button:hover {
+      opacity: 1;
+    }
+
+    /* Hide default Unity loading bar (we use our own) */
+    #unity-loading-bar {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Loading Screen -->
+  <div id="loading-overlay">
+    <div class="loading-content">
+      <div class="slash-decoration"></div>
+      <h1 class="game-title">Samurai <span>Z</span></h1>
+      <p class="studio-name">Sneet Games</p>
+      <div class="progress-container">
+        <div class="progress-track">
+          <div class="progress-fill" id="custom-progress"></div>
+        </div>
+        <p class="progress-text" id="progress-label">Loading…</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Unity Container -->
+  <div id="unity-container" class="unity-desktop">
+    <canvas id="unity-canvas" width="720" height="1280" tabindex="-1"></canvas>
+    <div id="unity-loading-bar">
+      <div id="unity-logo"></div>
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
+    </div>
+    <div id="unity-warning"></div>
+    <div id="unity-footer">
+      <div id="unity-build-title">Samurai Z</div>
+      <div id="unity-fullscreen-button"></div>
+    </div>
+  </div>
+
+  <script>
+    var canvas = document.querySelector("#unity-canvas");
+    var progressFill = document.getElementById("custom-progress");
+    var progressLabel = document.getElementById("progress-label");
+    var loadingOverlay = document.getElementById("loading-overlay");
+
+    function unityShowBanner(msg, type) {
+      var warningBanner = document.querySelector("#unity-warning");
+      function updateBannerVisibility() {
+        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+      }
+      var div = document.createElement('div');
+      div.innerHTML = msg;
+      warningBanner.appendChild(div);
+      if (type === 'error') {
+        div.style.cssText = 'background: rgba(196,30,58,0.9); color: #fff;';
+      } else {
+        if (type === 'warning') {
+          div.style.cssText = 'background: rgba(201,168,76,0.9); color: #111;';
+        }
+        setTimeout(function () {
+          warningBanner.removeChild(div);
+          updateBannerVisibility();
+        }, 5000);
+      }
+      updateBannerVisibility();
+    }
+
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/Samurai Z.loader.js";
+    var config = {
+      arguments: [],
+      dataUrl: buildUrl + "/Samurai Z.data.br",
+      frameworkUrl: buildUrl + "/Samurai Z.framework.js.br",
+      codeUrl: buildUrl + "/Samurai Z.wasm.br",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Sneet Games",
+      productName: "Samurai Z",
+      productVersion: "0.5",
+      showBanner: unityShowBanner,
+    };
+
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      var meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      document.getElementsByTagName('head')[0].appendChild(meta);
+      document.querySelector("#unity-container").className = "unity-mobile";
+      canvas.className = "unity-mobile";
+    } else {
+      canvas.style.width = "720px";
+      canvas.style.height = "1280px";
+    }
+
+    canvas.style.background = "url('" + buildUrl + "/Samurai Z.jpg') center / cover";
+
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = function () {
+      createUnityInstance(canvas, config, function (progress) {
+        var pct = Math.round(progress * 100);
+        progressFill.style.width = pct + "%";
+        progressLabel.textContent = pct + "%";
+      }).then(function (unityInstance) {
+        // Fade out loading screen
+        loadingOverlay.classList.add("hidden");
+        document.querySelector("#unity-fullscreen-button").onclick = function () {
+          unityInstance.SetFullscreen(1);
+        };
+      }).catch(function (message) {
+        alert(message);
+      });
+    };
+
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>
