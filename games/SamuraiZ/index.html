@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samurai Z — Sneet Games</title>
   <meta name="description" content="Play Samurai Z, an action game by Sneet Games. Built with Unity WebGL.">
-  <link rel="shortcut icon" href="Build/Samurai Z.jpg">
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,7 +23,6 @@
       --crimson: #c41e3a;
       --crimson-glow: #e63950;
       --gold: #c9a84c;
-      --gold-dim: #8a7235;
       --text-primary: #f0ece4;
       --text-secondary: #8a8690;
     }
@@ -81,7 +80,7 @@
       gap: 40px;
     }
 
-    /* Decorative kanji-style slash */
+    /* Decorative slash */
     .slash-decoration {
       width: 2px;
       height: 60px;
@@ -239,7 +238,7 @@
       opacity: 1;
     }
 
-    /* Hide default Unity loading bar (we use our own) */
+    /* Hide default Unity loading bar */
     #unity-loading-bar {
       display: none !important;
     }
@@ -307,12 +306,12 @@
     }
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/Samurai Z.loader.js";
+    var loaderUrl = buildUrl + "/SamuraiZ.loader.js";
     var config = {
       arguments: [],
-      dataUrl: buildUrl + "/Samurai Z.data.br",
-      frameworkUrl: buildUrl + "/Samurai Z.framework.js.br",
-      codeUrl: buildUrl + "/Samurai Z.wasm.br",
+      dataUrl: buildUrl + "/SamuraiZ.data.unityweb",
+      frameworkUrl: buildUrl + "/SamuraiZ.framework.js.unityweb",
+      codeUrl: buildUrl + "/SamuraiZ.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Sneet Games",
       productName: "Samurai Z",
@@ -334,7 +333,7 @@
       canvas.style.height = "1280px";
     }
 
-    canvas.style.background = "url('" + buildUrl + "/Samurai Z.jpg') center / cover";
+    canvas.style.background = "url('" + buildUrl + "/SamuraiZ.jpg') center / cover";
 
     var script = document.createElement("script");
     script.src = loaderUrl;
@@ -344,7 +343,6 @@
         progressFill.style.width = pct + "%";
         progressLabel.textContent = pct + "%";
       }).then(function (unityInstance) {
-        // Fade out loading screen
         loadingOverlay.classList.add("hidden");
         document.querySelector("#unity-fullscreen-button").onclick = function () {
           unityInstance.SetFullscreen(1);

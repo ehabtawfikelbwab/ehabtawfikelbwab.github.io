@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Slide to Rise! — Sneet Games</title>
   <meta name="description" content="Play Slide to Rise!, a puzzle game by Sneet Games. Built with Unity WebGL.">
-  <link rel="shortcut icon" href="Build/Slide To Rise.jpg">
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,7 +23,6 @@
       --accent: #6c5ce7;
       --accent-bright: #a29bfe;
       --cyan: #00cec9;
-      --cyan-dim: #0a8f8c;
       --text-primary: #f1f0f7;
       --text-secondary: #7c7a8e;
     }
@@ -56,7 +55,7 @@
       pointer-events: none;
     }
 
-    /* Animated gradient orbs behind content */
+    /* Animated gradient orbs */
     .orb {
       position: absolute;
       border-radius: 50%;
@@ -364,12 +363,12 @@
     }
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/Slide To Rise.loader.js";
+    var loaderUrl = buildUrl + "/SlideToRise.loader.js";
     var config = {
       arguments: [],
-      dataUrl: buildUrl + "/Slide To Rise.data.br",
-      frameworkUrl: buildUrl + "/Slide To Rise.framework.js.br",
-      codeUrl: buildUrl + "/Slide To Rise.wasm.br",
+      dataUrl: buildUrl + "/SlideToRise.data.unityweb",
+      frameworkUrl: buildUrl + "/SlideToRise.framework.js.unityweb",
+      codeUrl: buildUrl + "/SlideToRise.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "Sneet Games",
       productName: "Slide to Rise!",
@@ -391,7 +390,7 @@
       canvas.style.height = "1280px";
     }
 
-    canvas.style.background = "url('" + buildUrl + "/Slide To Rise.jpg') center / cover";
+    canvas.style.background = "url('" + buildUrl + "/SlideToRise.jpg') center / cover";
 
     var script = document.createElement("script");
     script.src = loaderUrl;
