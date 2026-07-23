@@ -3,28 +3,32 @@
 ========================================= */
 :root {
     /* Colors */
-    --bg-color: #0e0e0e;             /* Deep Charcoal */
-    --text-primary: #ffffff;         /* Pure White */
-    --text-secondary: #d4d4d4;       /* Silver */
-    --text-muted: #a3a3a3;           /* Graphite Grey */
-    
+    --bg-color: #0e0e0e;
+    /* Deep Charcoal */
+    --text-primary: #ffffff;
+    /* Pure White */
+    --text-secondary: #d4d4d4;
+    /* Silver */
+    --text-muted: #a3a3a3;
+    /* Graphite Grey */
+
     /* Card Styles */
     --card-bg: rgba(30, 30, 30, 0.7);
     --card-bg-hover: rgba(40, 40, 40, 0.7);
     --card-border: rgba(255, 255, 255, 0.06);
     --card-border-light: rgba(255, 255, 255, 0.1);
-    
+
     /* Interactive Elements */
     --element-bg: rgba(255, 255, 255, 0.1);
     --element-bg-hover: rgba(255, 255, 255, 0.2);
-    
+
     /* Typography */
     --font-main: 'Outfit', sans-serif;
-    
+
     /* Shadows */
     --shadow-default: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
-    
+
     /* Transitions */
     --transition-fast: 0.2s;
     --transition-normal: 0.3s ease;
@@ -197,11 +201,11 @@ body {
 
 /* --- Experience Timeline --- */
 .experience-timeline {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 10px 0 20px 0;
     width: 100%;
-    flex-wrap: wrap;
 }
 
 .experience-card {
@@ -210,8 +214,6 @@ body {
     border-top: 1px solid var(--card-border-light);
     border-radius: 16px;
     padding: 24px;
-    flex: 1 1 0;
-    min-width: 200px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -226,19 +228,10 @@ body {
 }
 
 .exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
-}
-
-.exp-header h3 {
-    font-size: 1.3rem;
-    color: #f8fafc;
-    margin: 0;
-    border: none;
-    padding: 0;
-    width: 100%;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -259,10 +252,19 @@ body {
 }
 
 .exp-company {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    margin-bottom: 16px;
-    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.exp-company h3 {
+    font-size: 1.6rem;
+    color: #f8fafc;
+    margin: 0;
+    border: none;
+    padding: 0;
+    width: 100%;
     text-align: center;
 }
 
@@ -612,10 +614,12 @@ footer {
         transform: scale(1);
         box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
     }
+
     50% {
         transform: scale(1.15);
         box-shadow: 0 0 18px rgba(255, 255, 255, 0.9);
     }
+
     100% {
         transform: scale(1);
         box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
@@ -623,8 +627,13 @@ footer {
 }
 
 @keyframes textGlow {
-    from { text-shadow: 0 0 4px rgba(255, 255, 255, 0.6); }
-    to { text-shadow: 0 0 10px rgba(255, 255, 255, 1); }
+    from {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    }
+
+    to {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    }
 }
 
 /* =========================================
@@ -671,6 +680,10 @@ footer {
     .profile-left h1 {
         font-size: 1.6em;
     }
+
+    .experience-timeline {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -703,6 +716,11 @@ footer {
 }
 
 @media (pointer: coarse) {
-    .project-card:hover { transform: none; }
-    .contact-links a:hover { transform: none; }
+    .project-card:hover {
+        transform: none;
+    }
+
+    .contact-links a:hover {
+        transform: none;
+    }
 }

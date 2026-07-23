@@ -3,7 +3,7 @@ const PortfolioData = {
     name: "Ehab Tawfik",
     title: "Senior Unity Developer",
     photo: "pics/CV_Photo.jpg",
-    bio: "I am a Game Developer with 5+ years of experience engineering high-performance mobile, WebGL, and PC games using Unity and C#. I specialize in creating engaging core gameplay loops, procedural generation, and optimizing performance across multiple platforms.",
+    bio: "Game Developer with 5+ years of experience engineering high-performance mobile, WebGL, and PC games using Unity and C#. I specialize in creating engaging core gameplay loops, procedural generation, and optimizing performance across multiple platforms.",
     stats: [
       { label: "Shipped Games", value: 24 },
       { label: "Years Experience", value: "5+" },
@@ -27,8 +27,8 @@ const PortfolioData = {
       company: "Sneet Games",
       period: "02/2024 - Present",
       achievements: [
-        "Engineered casual mobile games independently.",
-        "Architected gameplay systems, procedural level generation, and UI flows."
+        "Developing casual mobile games with a focus on gameplay, player experience, performance, and polish.",
+        "Building gameplay systems, procedural levels, enemy AI, UI, progression, and mobile optimization using Unity and C#."
       ]
     },
     {
@@ -36,8 +36,8 @@ const PortfolioData = {
       company: "Squid Gun Studio",
       period: "04/2022 - 01/2024",
       achievements: [
-        "Collaborated remotely as part of a high-performing mobile game development team.",
-        "Contributed to core gameplay mechanics and rapid prototype development."
+        "Worked remotely on mobile game development as part of a collaborative team.",
+        "Contributed to gameplay mechanics, prototyping, level design, optimization, and visual polish."
       ]
     },
     {
@@ -45,8 +45,8 @@ const PortfolioData = {
       company: "Game4Life Studio",
       period: "06/2021 - 03/2022",
       achievements: [
-        "Gained practical experience in mobile game development.",
-        "Contributed to feature implementation and project improvements."
+        "Worked remotely on mobile games in a collaborative production environment.",
+        "Implemented gameplay features, improved projects, and supported publishing workflows."
       ]
     },
     {
@@ -54,8 +54,8 @@ const PortfolioData = {
       company: "EtE Studio",
       period: "04/2020 - 05/2021",
       achievements: [
-        "Developed mobile games independently while rapidly improving skills.",
-        "Focused on building stronger gameplay loops and improving player experience."
+        "Independently developed mobile games using Unity and C#.",
+        "Strengthened game design, gameplay systems, and player experience through continuous iteration."
       ]
     }
   ],

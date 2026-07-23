@@ -93,10 +93,10 @@ function renderExperience() {
 
   container.innerHTML = PortfolioData.experience.map(exp => `
     <div class="experience-card">
-      <div class="exp-header">
-        <h3>${exp.role}</h3>
+      <div class="exp-company">
+        <h3>${exp.company}</h3>
       </div>
-      <p class="exp-company">${exp.company}</p>
+      <p class="exp-header">${exp.role}</p>
       <ul>
         ${exp.achievements.map(ach => `<li>${ach}</li>`).join("")}
       </ul>
