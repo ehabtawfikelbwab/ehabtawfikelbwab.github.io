@@ -12,9 +12,9 @@ const PortfolioData = {
     photo: "pics/CV_Photo.jpg",
     bio: aboutText,
     stats: [
-      { label: "Shipped Games", value: 24 },
+      { label: "Shipped Games", value: +24 },
       { label: "Years Experience", value: "5+" },
-      { label: "Platforms", value: "4" }
+      { label: "Platforms", value: 4 }
     ]
   },
   skills: [
