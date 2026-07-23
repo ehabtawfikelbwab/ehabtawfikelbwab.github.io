@@ -64,6 +64,19 @@ function animate(timestamp) {
     ctx.globalAlpha = 0.9;
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(s.x, s.y, 1.5, 1.5);
+    
+    // Constellation lines to mouse
+    const dx = mouse.x - s.x;
+    const dy = mouse.y - s.y;
+    const dist = Math.sqrt(dx*dx + dy*dy);
+    if (dist < 150) {
+      ctx.beginPath();
+      ctx.moveTo(s.x, s.y);
+      ctx.lineTo(mouse.x, mouse.y);
+      ctx.strokeStyle = `rgba(255, 255, 255, ${(1 - dist/150) * 0.3})`; // White lines
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
   }
 
   // spawn falling star if interval passed

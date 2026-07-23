@@ -1,8 +1,14 @@
 const PortfolioData = {
   profile: {
     name: "Ehab Tawfik",
-    title: "Game Developer", // Fixed duplicate 'name'
-    photo: "pics/CV_Photo.jpg"
+    title: "Senior Unity Developer",
+    photo: "pics/CV_Photo.jpg",
+    bio: "I am a Game Developer with 5+ years of experience engineering high-performance mobile, WebGL, and PC games using Unity and C#. I specialize in creating engaging core gameplay loops, procedural generation, and optimizing performance across multiple platforms.",
+    stats: [
+      { label: "Shipped Games", value: 24 },
+      { label: "Years Experience", value: "5+" },
+      { label: "Platforms", value: "4" }
+    ]
   },
   skills: [
     "Unity Engine",
@@ -14,6 +20,44 @@ const PortfolioData = {
     "Cross-platform development (Android, ios, WebGL and PC)",
     "3D Modeling",
     "2D Design",
+  ],
+  experience: [
+    {
+      role: "Game Developer",
+      company: "Sneet Games",
+      period: "02/2024 - Present",
+      achievements: [
+        "Engineered casual mobile games independently.",
+        "Architected gameplay systems, procedural level generation, and UI flows."
+      ]
+    },
+    {
+      role: "Game Developer",
+      company: "Squid Gun Studio",
+      period: "04/2022 - 01/2024",
+      achievements: [
+        "Collaborated remotely as part of a high-performing mobile game development team.",
+        "Contributed to core gameplay mechanics and rapid prototype development."
+      ]
+    },
+    {
+      role: "Game Developer",
+      company: "Game4Life Studio",
+      period: "06/2021 - 03/2022",
+      achievements: [
+        "Gained practical experience in mobile game development.",
+        "Contributed to feature implementation and project improvements."
+      ]
+    },
+    {
+      role: "Game Developer",
+      company: "EtE Studio",
+      period: "04/2020 - 05/2021",
+      achievements: [
+        "Developed mobile games independently while rapidly improving skills.",
+        "Focused on building stronger gameplay loops and improving player experience."
+      ]
+    }
   ],
   projects: {
     pageSize: 6,
@@ -54,8 +98,6 @@ const PortfolioData = {
         name: "Flappy Doll 3D",
         description: "Guide your ragdoll through spinning blades—time it right to survive and win!",
         img: "pics/flappy-doll-3d.png",
-        // video: { url: "videos/Fill_lord_3D.mp4" },
-        // link: "https://apkpure.com/fill-lord-3d/com.EtEStudio.FillLord",
         year: 2021
       },
       {
@@ -70,7 +112,6 @@ const PortfolioData = {
         name: "Painter Hand 3D",
         description: "Catch painting cubes and create your masterpiece!",
         img: "pics/painter-hand-3d.png",
-        // video: { url: "videos/Fill_lord_3D.mp4" },
         link: "https://apkpure.com/painter-hand-3d/com.SneetGames.painterhand",
         year: 2022
       },
@@ -86,7 +127,6 @@ const PortfolioData = {
         name: "Rolling Color 3d",
         description: "Collect color from your tank and roll around to paint everything in sight!",
         img: "pics/rolling-color-3d.png",
-        // video: { url: "videos/Fill_lord_3D.mp4" },
         link: "https://apkpure.com/rolling-color-3d/com.squidgun.rollingcolor3d",
         year: 2022
       },
@@ -94,7 +134,6 @@ const PortfolioData = {
         name: "Move N Collect",
         description: "Start with one character, use your rope to collect more, and grow your chain as you move!",
         img: "pics/move-n-collect.png",
-        // video: { url: "videos/Fill_lord_3D.mp4" },
         link: "https://apkpure.com/move-n-collect/com.squidgun.movencollect",
         year: 2023
       },
@@ -184,6 +223,7 @@ const PortfolioData = {
         img: "pics/samurai-z.jpg",
         video: { url: "videos/samurai_z_video.mp4" },
         link: "https://play.google.com/store/apps/details?id=com.SneetGames.SamuraiZ",
+        playableUrl: "games/SamuraiZ",
         year: 2026
       },
       {
@@ -208,6 +248,7 @@ const PortfolioData = {
         img: "pics/slide-to-rise.jpg",
         video: { url: "videos/Slide_To_Rise.mp4" },
         link: "https://play.google.com/store/apps/details?id=com.SneetGames.SlidetoRise",
+        playableUrl: "games/SlideToRise",
         year: 2026
       }
     ]
