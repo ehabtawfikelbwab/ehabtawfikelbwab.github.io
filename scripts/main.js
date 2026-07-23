@@ -66,7 +66,7 @@ function initReveal() {
 function renderProfileInfo() {
   const aboutEl = document.getElementById("about-text");
   if (aboutEl && PortfolioData.profile) {
-    aboutEl.innerText = PortfolioData.profile.bio;
+    aboutEl.innerHTML = PortfolioData.profile.bio;
   }
 }
 

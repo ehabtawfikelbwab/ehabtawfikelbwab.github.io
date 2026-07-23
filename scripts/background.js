@@ -1,12 +1,26 @@
 const canvas = document.getElementById("bg-canvas");
 const ctx = canvas.getContext("2d");
 
-let w = canvas.width = window.innerWidth;
-let h = canvas.height = window.innerHeight;
+let w = window.innerWidth;
+let h = window.innerHeight;
+
+function resizeCanvas() {
+  w = window.innerWidth;
+  h = window.innerHeight;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  ctx.scale(dpr, dpr);
+}
+
+resizeCanvas();
 
 window.addEventListener("resize", () => {
-  w = canvas.width = window.innerWidth;
-  h = canvas.height = window.innerHeight;
+  // On mobile, avoid resetting canvas just because the URL bar hides/shows
+  if (window.innerWidth === w && Math.abs(window.innerHeight - h) < 150) {
+    return;
+  }
+  resizeCanvas();
 });
 
 const mouse = { x: w / 2, y: h / 2 };

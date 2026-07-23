@@ -1,9 +1,16 @@
+const aboutText =
+  "<p><strong>Game Developer</strong> with <strong>5+ years of experience</strong> creating games for <strong>Android</strong>, <strong>iOS</strong>, <strong>WebGL</strong>, and <strong>PC</strong>.</p>" +
+
+  "<p>I specialize in <strong>Unity</strong> and <strong>C#</strong>, with hands-on experience in <strong>Gameplay Programming</strong>, <strong>Game Systems</strong>, <strong>Procedural Generation</strong>, <strong>Performance Optimization</strong>, <strong>3D Modeling</strong>, <strong>2D Design</strong>, <strong>VFX</strong>, and <strong>SFX</strong>.</p>" +
+
+  "<p>I enjoy creating games that are <strong>fun</strong>, <strong>visually polished</strong>, and <strong>optimized for smooth performance</strong>, delivering high-quality experiences across multiple platforms.</p>";
+
 const PortfolioData = {
   profile: {
     name: "Ehab Tawfik",
     title: "Senior Unity Developer",
     photo: "pics/CV_Photo.jpg",
-    bio: "Game Developer with 5+ years of experience engineering high-performance mobile, WebGL, and PC games using Unity and C#. I specialize in creating engaging core gameplay loops, procedural generation, and optimizing performance across multiple platforms.",
+    bio: aboutText,
     stats: [
       { label: "Shipped Games", value: 24 },
       { label: "Years Experience", value: "5+" },
