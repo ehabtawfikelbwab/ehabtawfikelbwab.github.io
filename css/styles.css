@@ -122,8 +122,8 @@ body {
 }
 
 .profile-left img {
-    width: 180px;
-    height: 180px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid rgb(255, 255, 255);
@@ -592,7 +592,7 @@ footer {
 ========================================= */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(10px);
     transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 

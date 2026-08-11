@@ -45,7 +45,7 @@ function initReveal() {
         // observer.unobserve(entry.target); 
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0 });
   
   reveals.forEach(r => observer.observe(r));
   
@@ -57,7 +57,7 @@ function initReveal() {
         r.classList.add('active');
       }
     });
-  }, 100);
+  }, 0);
 }
 
 /* =========================================
