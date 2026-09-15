@@ -257,6 +257,15 @@ const PortfolioData = {
         link: "https://play.google.com/store/apps/details?id=com.SneetGames.SlidetoRise",
         playableUrl: "games/SlideToRise",
         year: 2026
+      },
+      {
+        name: "Snake Route: Blast!",
+        description: "Plan the perfect sequence, shoot blast blocks, and guide your snake to the goal!",
+        img: "pics/snake-route-blast.jpg",
+        video: { url: "videos/Snake_Route_Blast.mp4" },
+        link: "https://play.google.com/store/apps/details?id=com.SneetGames.SnakeRouteBlast",
+        // playableUrl: "games/SlideToRise",
+        year: 2026
       }
     ]
   },
