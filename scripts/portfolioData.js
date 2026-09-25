@@ -1,5 +1,5 @@
 const aboutText =
-  "<p><strong>Game Developer</strong> with <strong>5+ years of experience</strong> creating games for <strong>Android</strong>, <strong>iOS</strong>, <strong>WebGL</strong>, and <strong>PC</strong>.</p>" +
+  "<p><strong>Senior Game Developer</strong> with <strong>6+ years of experience</strong> creating games for <strong>Android</strong>, <strong>iOS</strong>, <strong>WebGL</strong>, and <strong>PC</strong>.</p>" +
 
   "<p>I specialize in <strong>Unity</strong> and <strong>C#</strong>, with hands-on experience in <strong>Gameplay Programming</strong>, <strong>Game Systems</strong>, <strong>Procedural Generation</strong>, <strong>Performance Optimization</strong>, <strong>3D Modeling</strong>, <strong>2D Design</strong>, <strong>VFX</strong>, and <strong>SFX</strong>.</p>" +
 
@@ -12,8 +12,8 @@ const PortfolioData = {
     photo: "pics/CV_Photo.jpg",
     bio: aboutText,
     stats: [
-      { label: "Shipped Games", value: +24 },
-      { label: "Years Experience", value: "5+" },
+      { label: "Shipped Games", value: +25 },
+      { label: "Years Experience", value: "6+" },
       { label: "Platforms", value: 4 }
     ]
   },
@@ -30,7 +30,7 @@ const PortfolioData = {
   ],
   experience: [
     {
-      role: "Game Developer",
+      role: "Senior Game Developer",
       company: "Sneet Games",
       period: "02/2024 - Present",
       achievements: [
@@ -39,7 +39,7 @@ const PortfolioData = {
       ]
     },
     {
-      role: "Game Developer",
+      role: "Mid Game Developer",
       company: "Squid Gun Studio",
       period: "04/2022 - 01/2024",
       achievements: [
@@ -48,7 +48,7 @@ const PortfolioData = {
       ]
     },
     {
-      role: "Game Developer",
+      role: "Junior Game Developer",
       company: "Game4Life Studio",
       period: "06/2021 - 03/2022",
       achievements: [
@@ -57,7 +57,7 @@ const PortfolioData = {
       ]
     },
     {
-      role: "Game Developer",
+      role: "Junior Game Developer",
       company: "EtE Studio",
       period: "04/2020 - 05/2021",
       achievements: [
